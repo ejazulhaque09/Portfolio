@@ -1,0 +1,154 @@
+/* Button Styling */
+.btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.btn:hover {
+    background-color: rgb(68, 70, 203);
+}
+
+/* Day/Night Toggle */
+.switch{
+    font-size: 18px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 1.5em;
+}
+    .switch input{
+        display: none;
+        opacity: 0;
+        width: 0;
+        height: 0;
+
+    }
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(116, 116, 249);
+    transform: .2s;
+    border-radius: 30px;
+}
+.slider::before{
+    position: absolute;
+    content: "";
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 20px;
+    background-color: white;
+    transition: .4s;
+}
+input:checked + .slider::before{
+    background: gray;
+}
+input:checked + .slider{
+    background: rgb(64, 23, 169);
+}
+input:focus + .slider::before{
+    box-shadow: 0 0 1px navajowhite;
+}
+input:checked + .slider:before{
+    transform: translateX(2em);
+}
+
+/* Media Queries */
+        /* For Desktop/Laptop */
+        @media (min-width: 1024px) {
+            header {
+                background-color: #424242;
+                padding: 20px;
+                height: 30px;
+            }
+
+            footer {
+                background-color: #1a202c;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .btn {
+                background-color: #4a5568;
+                color: #ffffff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease-in-out;
+            }
+
+            section {
+                padding: 80px 0;
+            }
+            section h2 {
+                color: lightseagreen;
+                font-size: 48px;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+            section p {
+                color: #4a5568;
+                text-align: center;
+            }
+
+        }
+
+        /* For iPad Mini */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            /* Adjust styles as needed for iPad Mini */
+            header {
+                background-color: #424242;
+                padding: 15px;
+            }
+            header nav a {
+                margin-right: 15px;
+            }
+            footer {
+                padding: 15px;
+            }
+            .btn {
+                padding: 8px 16px;
+            }
+            section {
+                padding: 60px 0;
+            }
+            section h2 {
+                font-size: 24px;
+                margin-bottom: 30px;
+            }
+            section p {
+                font-size: 16px;
+            }
+        }
+
+        /* For Samsung Galaxy S8+ */
+        @media (max-width: 767px) {
+            /* Adjust styles as needed for Samsung Galaxy S8+ */
+            header {
+                background-color: #424242;
+                padding: 10px;
+            }
+            header nav a {
+                margin-right: 10px;
+            }
+            footer {
+                padding: 10px;
+            }
+            .btn {
+                padding: 6px 12px;
+            }
+            section {
+                padding: 40px 0;
+            }
+            section h2 {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+            section p {
+                font-size: 14px;
+            }
+        }
